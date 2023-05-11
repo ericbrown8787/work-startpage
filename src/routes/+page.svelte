@@ -1,19 +1,35 @@
 <script>
 	import Shortcut from '../lib/shortcut.svelte';
+	import { links } from '../lib/config/config.json';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+<div class="container">
+	<h1>Welcome!</h1>
 
-<section class="shortcuts">
-	<Shortcut url="https://mail.google.com/" linkLabel="Gmail" alt="Gmail Icon" />
-	<Shortcut url="https://www.github.com/" linkLabel="Github" alt="Github Icon" />
-</section>
+	<section class="shortcuts">
+		<h3>Quick Links</h3>
+		<section class="shortcut-links">
+			{#each links as link}
+				<Shortcut url={link.url} linkLabel={link.label} alt={link.alt} />
+			{/each}
+		</section>
+	</section>
+</div>
 
 <style>
-	.links {
+	.container {
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.shortcut-links {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		gap: 1rem;
 	}
 </style>

@@ -1,4 +1,6 @@
-<script></script>
+<script>
+	import '../lib/css/reset.css';
+</script>
 
 <slot />
 

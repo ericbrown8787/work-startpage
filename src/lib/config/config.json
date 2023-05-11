@@ -1,0 +1,22 @@
+{
+	"links": [
+		{
+			"url": "https://mail.google.com/",
+			"label": "Mail",
+			"icon": "",
+			"alt": "Gmail icon"
+		},
+		{
+			"url": "https://print.stamps.com/Webpostage/default2.aspx?",
+			"label": "Stamps.com",
+			"icon": "",
+			"alt": "Stamps.com icon"
+		},
+		{
+			"url": "https://sheets.google.com/",
+			"label": "Google Sheets",
+			"icon": "",
+			"alt": "Google Sheets icon"
+		}
+	]
+}
